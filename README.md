@@ -1,2 +1,2 @@
 # 8art
-Repository for 8Art.com AR &amp; 3D renderings
+Repository for 8-Art.com AR &amp; 3D renderings
