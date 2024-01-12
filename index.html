@@ -348,7 +348,7 @@
 				<div class="col-xs-12 col-md-10 offset-md-1 col-xl-10 offset-xl-1 aos-init aos-animate" data-aos="zoom-out" data-aos-delay="400">
 					<div class="row">
 						<!-- contactForm -->
-						<form id="contactForm" action="send.php" method="post">
+						<!-- <form id="contactForm" action="sent.php" method="post">
 							<div class="row">
 								<div class="col-md-6">
 									<label for="name">Name:</label><br>
@@ -363,15 +363,46 @@
 							<div class="row aos-init aos-animate" data-aos="zoom-out" data-aos-delay="800">
                                 <div class="col-md-12">
 									<label for="message">Message:</label><br>
-									<textarea id="message" name="message" rows="4" class="form-field"required></textarea>
+									<textarea id="message" name="message" rows="4" class="form-field" required></textarea>
 								
-									<div class="g-recaptcha" 		data-sitekey="6LfPs0cpAAAAALZTV80UuCrJ-3Nr766cf0q5RicR" data-action="LOGIN"></div>
+									<div class="g-recaptcha" data-sitekey="6LfPs0cpAAAAALZTV80UuCrJ-3Nr766cf0q5RicR" data-action="LOGIN"></div>
 										<br/>
 										<input type="submit"class="btn btn-primary" value="Submit">
 									</div>
 								</div>
 							</div>
+						</form> -->
+
+						<!-- FORMSFREE -->
+						<!-- <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xayrykol" method="post">
+							<fieldset id="fs-frm-inputs">
+							  <label for="full-name">Full Name</label>
+							  <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+
+							  <label for="email-address">Email Address</label>
+							  <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+
+							  <label for="message">Message</label>
+							  <textarea rows="5" name="message" id="message" required></textarea>
+							  <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+							</fieldset>
+							<input type="submit" value="Submit">
+						</form> -->
+
+						<!--JS FORM -->
+						<form id="contactForm">
+							<label for="name">Name:</label>
+							<input type="text" id="name" name="name" required>
+					
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" required>
+					
+							<label for="message">Message:</label>
+							<textarea id="message" name="message" required></textarea>
+					
+							<button type="submit">Submit</button>
 						</form>
+
 					</div>
 				</div>
 			</div>
@@ -401,6 +432,22 @@
 	<script src="custom/custom.js"></script>
 	<script>
         AOS.init();
+
+		document.getElementById('contactForm').addEventListener('submit', async function (e) {
+			e.preventDefault();
+
+			const formData = new FormData(this);
+			const response = await fetch('/custom/custom.js', {
+				method: 'POST',
+				body: formData
+			});
+
+			if (response.ok) {
+				alert('Message sent successfully!');
+			} else {
+				alert('Failed to send message. Please try again later.');
+			}
+		});
 	</script>
 </body>
 </html>
