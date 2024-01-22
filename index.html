@@ -354,7 +354,7 @@ Introducing our revolutionary 3D Model Viewer with QR Code Integration and Augme
 				<div class="col-xs-12 col-md-10 offset-md-1 col-xl-10 offset-xl-1 aos-init aos-animate" data-aos="zoom-out" data-aos-delay="400">
 					<div class="row">
 						<!-- contactForm -->
-						<!-- <form id="contactForm" action="https://formspree.io/f/mrgnebql" method="POST">
+						<!-- <form id="contactForm" action="https://formspree.io/f/xayrykol" method="POST">
 							<div class="row">
 								<div class="col-md-6">
 									<label for="name">Name:</label><br>
@@ -380,19 +380,32 @@ Introducing our revolutionary 3D Model Viewer with QR Code Integration and Augme
 						</form> -->
 
 						<!-- FORMSFREE -->
-						<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xayrykol" method="POST">
+
+						<form id="fs-frm" class="contactForm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xayrykol" method="POST">
 							<fieldset id="fs-frm-inputs">
-							  <label for="full-name">Full Name</label>
-							  <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+								<div class="row">
+									<div class="col-md-6">
+										<label for="full-name">Full Name</label><br>
+										<input type="text" name="name" id="full-name" placeholder="First and Last" class="form-field" required="">
+									</div>
+									<div class="col-md-6">
+										<label for="email-address">Email Address</label><br>
+								<input type="email" name="_replyto" id="email-address" class="form-field" placeholder="email@domain.tld" required="">
+									</div>
+								</div>
 
-							  <label for="email-address">Email Address</label>
-							  <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
-
-							  <label for="message">Message</label>
-							  <textarea rows="5" name="message" id="message" required></textarea>
-							  <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+								<div class="row aos-init aos-animate" data-aos="zoom-out" data-aos-delay="800">
+									<div class="col-md-12">
+										<label for="message">Message</label><br>
+										<textarea rows="5" name="message" id="message" class="form-field" required></textarea>
+									</div>
+								</div>
 							</fieldset>
-							<input type="submit" value="Submit">
+							<div class="row aos-init aos-animate" data-aos="zoom-out" data-aos-delay="800">
+								<div class="col-md-12">
+									<input type="submit"class="btn btn-primary" value="Submit">
+								</div>
+							</div>
 						</form>
 
 						<!-- JS FORM
@@ -417,13 +430,6 @@ Introducing our revolutionary 3D Model Viewer with QR Code Integration and Augme
 
 	<footer id="footer" class="bg-dark pt-4 pb-5">
         <div class="container">
-            <div class="social-links">
-                <a href="" target="_blank">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                <a href="" target="_blank">
-                    <i class="fa-brands fa-artstation"></i>
-                </a>
-            </div>
             <div class="copyright">
                 © Copyright <strong><span>8art 3D Studio</span></strong>. All Rights Reserved 2008-2024<br>
 				Delivering visually rich, interactive 3D rendering of residential real estate for web.
